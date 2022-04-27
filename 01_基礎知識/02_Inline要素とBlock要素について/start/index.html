@@ -1,3 +1,4 @@
+<!-- セクション2：超初心者の方はここからスタート　7. HTMLのこれだけは知っておいて！インライン要素とブロック要素の使い分け -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +10,27 @@
 </head>
 
 <body>
+    <!-- インライン要素 -->
     <span>こんにちは！ 日本！</span>
-    <img src="image-1.jpg" alt="">
+    <span>こんにちは！ 日本！</span>
+    <span>こんにちは！ 日本！</span>
+    <span>こんにちは！ 日本！</span>
+    <!-- ブロック要素 -->
+    <!-- <div>こんにちは！ 日本！</div> -->
+    <style>
+        body {
+            /* インライン要素の中央揃え*/
+            text-align: center;
+        }
+        span {
+            display: block;
+            /* ブロック要素の中央揃え*/
+            margin: 0 auto;
+            width: 100px;
+            height: 400px;
+            background-color: magenta;
+        }
+    </style>
 </body>
 
 </html>
