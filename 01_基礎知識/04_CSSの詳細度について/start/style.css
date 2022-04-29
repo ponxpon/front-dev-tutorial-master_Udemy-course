@@ -1,0 +1,30 @@
+/* 詳細度5番目 */
+.parent{
+  color: blue;
+  font-weight: 600;
+}
+
+/* 詳細度4番目 */
+span {
+  color: purple;
+}
+
+/* 詳細度3番目 */
+.cls {
+  color: orange;
+}
+
+/* 詳細度1番目 */
+#first {
+  color: magenta;
+}
+
+/* 詳細度2番目 */
+.parent span{
+  color: red;
+}
+
+/* 同じセレクタの場合、後から記述されたプロパティの方が優先される */
+.parent span{
+  color: black;
+}
