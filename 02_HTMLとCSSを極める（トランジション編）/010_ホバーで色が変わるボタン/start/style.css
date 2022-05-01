@@ -1,0 +1,21 @@
+/* セクション4：CSSの基礎から始めよう(Transition編） 13.【丁寧に解説】まずはボタンを作りながら、CSSプロパティーを設定してみよう！ */
+#container {
+  /* インライン要素を中央揃え */
+  text-align: center;
+}
+
+.btn {
+  background-color: white;
+  /* 文字の色 */
+  color: black;
+  /* 枠線 */
+  border: 1px solid black;
+  /* 文字と枠線の余白 */
+  padding: 10px 40px;
+  /* 枠の外側の余白 */
+  margin: 50px 0px;
+  /* 文字の太さ 100~900(デフォルトは500) */
+  font-weight: 600;
+  /* マウスのカーソルをボタンの上に持っていくとポインターになる */
+  cursor: pointer;
+}
