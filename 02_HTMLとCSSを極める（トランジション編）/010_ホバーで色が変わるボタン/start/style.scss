@@ -1,16 +1,24 @@
-@charset "UTF-8";
 /* セクション4：CSSの基礎から始めよう(Transition編） 15.【Sass】CSSをSassで記述してみよう！ */
+
+// 変数を使うことで後ほど色を変更したい場合に、変数の値を変えるだけで色が変更できるので、工数が減る。
+$cWhite: white;
+$cBlack: black;
+
 #container {
   /* インライン要素を中央揃え */
   text-align: center;
+
+  .btn {
+
+  }
 }
 
 .btn {
-  background-color: white;
+  background-color: $cWhite;
   /* 文字の色 */
-  color: black;
+  color: $cBlack;
   /* 枠線 */
-  border: 1px solid black;
+  border: 1px solid $cBlack;
   /* 文字と枠線の余白 */
   padding: 10px 40px;
   /* 枠の外側の余白 */
@@ -20,20 +28,19 @@
   /* マウスのカーソルをボタンの上に持っていくとポインターになる */
   cursor: pointer;
   /* 状態が写り変わる秒数 transition: (箇所) (秒) (移り変わりの緩急) (開始するまでの遅延時間) */
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
 
-.btn:hover {
-  background-color: black;
-  color: white;
-}
+  // ボタンをホバーした時  .btn:hover → &:hover（Sassに変更） &で親のセレクタを代入できる
+  &:hover {
+    background-color: $cBlack;
+    color: $cWhite;
+  }
 
-.btn-cube {
-  background-color: black;
-}
+  &-cube {
+    background-color: $cBlack;
 
-.btn-cube .inner {
-  background-color: black;
+    & .inner {
+      background-color: $cBlack;
+    }
+  }
 }
-/*# sourceMappingURL=style.css.map */
