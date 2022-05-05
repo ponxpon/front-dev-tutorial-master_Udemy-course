@@ -1,0 +1,26 @@
+// セクション4：CSSの基礎から始めよう(Transition編） 17.【おさらい】CSSセレクターとSassネスティング
+.parent {
+  color: blue;
+
+  // .parent > .element parentの子要素（element）のみになる。 >で一階層下のみ適用 付けない場合は全て（孫要素）も対象になる。
+  & > .element {
+    color: purple;
+  }
+}
+
+.element {
+  color: red;
+
+  // 半角スペースを開けない場合は、elementとsecond-childの二つがついたHTML要素という意味になる。
+  &.second-child {
+    color: black;
+  }
+}
+
+// .parent & > .element 二つのセレクタで指定されている物があり、一つのセレクタで指定されるより詳細度が高くなるため、.second-childは適用されない。
+// .second-child {
+//   color: black;
+// }
+// .child {
+//   color: purple;
+// }
